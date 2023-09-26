@@ -1,0 +1,59 @@
+<h1 class="custom-title">Painel Desafio Dev</h1>
+
+<div class="container">
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+    <ng-container matColumnDef="Atividade">
+      <th mat-header-cell *matHeaderCellDef> Atividade </th>
+      <td mat-cell *matCellDef="let element"> {{ element.Atividade }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="Contrato">
+      <th mat-header-cell *matHeaderCellDef> Contrato </th>
+      <td mat-cell *matCellDef="let element"> {{ element.Contrato }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="Descricao">
+      <th mat-header-cell *matHeaderCellDef> Descrição </th>
+      <td mat-cell *matCellDef="let element"> {{ element.Descricao }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="Portfolio">
+      <th mat-header-cell *matHeaderCellDef> Portfolio </th>
+      <td mat-cell *matCellDef="let element"> {{ element.Portfolio }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="Responsavel">
+      <th mat-header-cell *matHeaderCellDef> Responsavel </th>
+      <td mat-cell *matCellDef="let element"> {{ element.Responsavel }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="Servico">
+      <th mat-header-cell *matHeaderCellDef> Servico </th>
+      <td mat-cell *matCellDef="let element"> {{ element.Servico }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="Usuario">
+      <th mat-header-cell *matHeaderCellDef> Usuario </th>
+      <td mat-cell *matCellDef="let element"> {{ element.Usuario }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="analise">
+      <th mat-header-cell *matHeaderCellDef> analise </th>
+      <td mat-cell *matCellDef="let element"> {{ element.analise }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="gruponivel1">
+      <th mat-header-cell *matHeaderCellDef> gruponivel1 </th>
+      <td mat-cell *matCellDef="let element"> {{ element.gruponivel1 }} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+  </table>
+
+  <mat-paginator
+    [pageSizeOptions]="[5, 10, 20]"
+    showFirstLastButtons
+  ></mat-paginator>
+</div>

@@ -1,0 +1,9 @@
+.custom-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 0;
+  background-color: #424242;
+  text-align: center;
+  padding-bottom: 10px;
+}
